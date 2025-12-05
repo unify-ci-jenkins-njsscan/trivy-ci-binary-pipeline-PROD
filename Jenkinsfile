@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        TRIVY_SCAN_TARGET = "${env.WORKSPACE}/image.tar"
+        TRIVY_SCAN_TARGET = "${env.WORKSPACE}/debian.tar"
     }
 
     stages {
