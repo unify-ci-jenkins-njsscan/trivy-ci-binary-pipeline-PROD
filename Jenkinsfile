@@ -5,9 +5,9 @@ pipeline {
         TRIVY_SCAN_TARGET = "${env.WORKSPACE}/image1.tar"
     }
 
-    triggers {
-        cron '00 23 * * 1-5' // Runs at 23:00 on every day-of-week from Monday through Friday
-    }
+    // triggers {
+    //     cron '00 23 * * 1-5' // Runs at 23:00 on every day-of-week from Monday through Friday
+    // }
 
     stages {
         stage('Trivy Image Scan') {
