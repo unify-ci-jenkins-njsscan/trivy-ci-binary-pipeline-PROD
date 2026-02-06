@@ -35,6 +35,16 @@ pipeline {
             }
         }
     }
+    stage('Security Scan') {
+            steps {
+                registerSecurityScan(
+                    // Security Scan to include
+                    artifacts: "trivy-results.sarif",
+                    format: "sarif",
+                    archive: true
+                )
+            }
+        }
 
     post {
         always {
